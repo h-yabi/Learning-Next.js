@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Layout from '../components/Layout';
 import { getAllPostsData } from '../lib/posts';
 
@@ -9,7 +10,9 @@ const Blog = ({ posts }) => {
           <li key={post.id}>
             <span>{post.id}</span>
             :{" "}
-            <span>{post.title}</span>
+            <Link href={`/posts/${post.id}`}>
+              <span>{post.title}</span>
+            </Link>
           </li>
         ))}
       </ul>
