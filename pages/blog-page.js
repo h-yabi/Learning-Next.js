@@ -10,7 +10,7 @@ const Blog = ({ posts }) => {
           <li key={post.id}>
             <span>{post.id}</span>
             :{" "}
-            <Link href={`/posts/${post.id}`}>
+            <Link href={`/posts/${post.id}`} className="text-blue-400 hover:underline">
               <span>{post.title}</span>
             </Link>
           </li>
